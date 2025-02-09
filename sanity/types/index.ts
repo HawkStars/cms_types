@@ -1,9 +1,16 @@
-import art from './art';
-import contribution from './contribution';
-import curator from './curator';
-import erasmus from './erasmus';
-import event from './event';
-import news from './news';
-import report from './report';
+// Sanity documents
+import art from './document/artwork';
+import contribution from './document/contribution';
+import curator from './document/curator';
+import erasmus from './document/erasmus';
+import event from './document/event';
+import news from './document/news';
+import report from './document/report';
 
-export const schemaTypes = [curator, art, erasmus, event, contribution, news, report];
+// Sanity Objects
+import art_property from './objects/art_property';
+
+export const documentSchemaTypes = [curator, art, erasmus, event, contribution, news, report];
+export const objectSchemaTypes = [art_property]
+
+export const allSchemaTypes = [...documentSchemaTypes, ...objectSchemaTypes];

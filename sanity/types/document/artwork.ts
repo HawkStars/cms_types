@@ -45,6 +45,12 @@ export default defineType({
       type: 'cloudinary.asset',
     }),
     defineField({
+      name: "art_properties",
+      title: "Art Properties",
+      type: "array",
+      of: [{ type: "art_property"}]
+    }),
+    defineField({
       name: 'is_sold',
       title: 'Vendido?',
       type: 'boolean'
